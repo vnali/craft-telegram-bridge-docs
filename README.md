@@ -375,7 +375,7 @@ mutation save($fileInput_file: FileInput!, $title: String) {
 
 The .env file in this scenario should be:
 ```
-ALLOWED_TELEGRAM_CHAT_IDS_USER='10-userA@example.test||11-userB@example.test'
+ALLOWED_TELEGRAM_CHAT_IDS_USER='10-userA||11-userB'
 ALLOWED_TELEGRAM_CHAT_IDS='123||124'
 ALLOWED_TELEGRAM_CHAT_IDS_GQL_TOKEN='3-full||2-basic'
 ALLOW_OTHER_TELEGRAM_CHAT_IDS_GQL=true
@@ -411,7 +411,7 @@ TELEGRAM_BOT_TOKEN | telegram-bot-token |
 TELEGRAM_WEBHOOK_ADDRESS | https://{example.test}/telegram-bridge/telegram-webhook | The destination address where Telegram requests are delivered. you should only replace the {site}.
 ALLOWED_TELEGRAM_CHAT_IDS | 1001\|\|1002 | Define which Telegram chat IDs have permission to interact with your website through the Telegram bot. separate the chat ids with `\|\|`.
 ALLOWED_TELEGRAM_CHAT_IDS_GQL_TOKEN | 1-full\|\|public or  \|\|public or 1-full\|\| | The tokens that each chat ID utilizes to execute GraphQL commands through the Telegram bot. the format is `{token ID-token name}` or `public` and you should separate the them by `\|\|`.
-ALLOWED_TELEGRAM_CHAT_IDS_USER | 1-info@example.test\|\| or  \|\|1-info@example.test or  1-info@example.test\|\|2-info2@example.test | The user element related to each telegram chat id. the format is `{user Id-user name}\|\|{user Id- username}` and separate the users by `\|\|`.
+ALLOWED_TELEGRAM_CHAT_IDS_USER | 1-user1\|\| or  \|\|1-user1 or  1-user1\|\|2-user2 | The user element related to each telegram chat id. the format is `{user Id-username}\|\|{user Id-username}` and separate the users by `\|\|`.
 ALLOW_OTHER_TELEGRAM_CHAT_IDS_GQL | true | If other chat ids are allowed to execute GraphQL queries.
 OTHER_TELEGRAM_CHAT_IDS_GQL_TOKEN | 2-basic | Which token, other chat Ids use when they are allowed to execute GraphQL queries. it should be `{token Id- token name}` or `public`.
 SHOW_CHAT_ID_TABLE | true | Show list of allowed chat Ids and their users and tokens at the setting page
