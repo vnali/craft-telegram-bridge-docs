@@ -401,7 +401,10 @@ If there is no error and `$SHOW_CHAT_ID_TABLE` is set to true, you can see list 
 At the bottom of the page, you can see set webhook form.
   - On the production environment, you should set webhook and the telegram will send updates to webhook url and this plugin takes care of proccessing and responding to them
 
-## List of all supported environment settings
+## List of all supported environment settings  
+
+You can get a copy of sample environment settings [here](https://github.com/vnali/craft-telegram-bridge-docs/blob/main/.env.example).  
+
 
 Environment setting | Example value | Description
 --- | --- | ---
